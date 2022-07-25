@@ -1,0 +1,16 @@
+{
+    "apps": [
+        {
+            "name": "AppProcess",
+            "script": "app.js",
+            "watch": "true",
+            "args": "8082"
+        },
+        {
+            "name": "Randoms",
+            "script": "app.js",
+            "watch": "true",
+            "args": "8083"
+        }
+    ]
+}
