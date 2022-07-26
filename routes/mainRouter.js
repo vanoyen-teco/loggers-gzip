@@ -80,7 +80,7 @@ router.route('/info')
         let loggedIn = (req.user)?true:false;
         let signUp = (req.user)?false:true;
         const argumentos = (process.argv)?process.argv.slice(2):false;
-        res.render("info", {
+        const datos = {
             pageTitle: "Server Info",
             loggedIn: loggedIn,
             signUp: signUp,
@@ -95,7 +95,9 @@ router.route('/info')
                 "argumentos": argumentos,
                 "cpus": totalCPUs
             }
-        });
+        }
+        //console.log(datos);
+        res.render("info",datos);
     });
 
 module.exports = router;

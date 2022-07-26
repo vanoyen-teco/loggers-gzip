@@ -53,8 +53,9 @@ initializePassport();
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/", loggingRouter, mainRouter, routeErrorHandler);
-app.use("/api", loggingRouter, apiRouter, routeErrorHandler);
+app.use("/", loggingRouter, mainRouter);
+app.use("/api", loggingRouter, apiRouter);
+app.use(routeErrorHandler);
 
 
 if(MODE !== 'fork'){
